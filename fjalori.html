@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fjalori Dialektore Shqip</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+  :root {
+    --bg: #F5F0E8;
+    --bg2: #EDE8DC;
+    --surface: #FFFDF7;
+    --border: rgba(60,40,10,0.12);
+    --border2: rgba(60,40,10,0.22);
+    --text: #1A1208;
+    --text2: #5C4A28;
+    --text3: #9C845A;
+    --accent: #8B2E0D;
+    --accent2: #C4521A;
+
+    --vlore-bg: #E8F0F8; --vlore: #1A3A5C;
+    --orikum-bg: #E4F2EA; --orikum: #1A4A2E;
+    --himare-bg: #F5EDDA; --himare: #5C3A00;
+    --dhermi-bg: #F2E4EE; --dhermi: #4A1A3A;
+    --jale-bg: #F0EAF8; --jale: #3A1A5C;
+    --palase-bg: #FDE8E0; --palase: #6B1A0A;
+    --borsh-bg: #E8F5E4; --borsh: #1A4A10;
+    --qeparo-bg: #EEF0F8; --qeparo: #1A2A5C;
+    --lukove-bg: #F8EDE8; --lukove: #5C2A1A;
+    --sarande-bg: #E4EEF2; --sarande: #1A3A4A;
+    --ksamil-bg: #E8F8F0; --ksamil: #0A4A2E;
+    --delvine-bg: #F5EEF8; --delvine: #3A1A5C;
+    --konispol-bg: #FFF0E0; --konispol: #5C3A00;
+    --gjirokaster-bg: #EEE8F5; --gjirokaster: #2A1A5C;
+    --tepelene-bg: #F0F5E8; --tepelene: #2A4A1A;
+    --permet-bg: #F8E8F0; --permet: #5C1A3A;
+    --memaliaj-bg: #E8F0EE; --memaliaj: #1A4A3A;
+    --fier-bg: #F5F0E0; --fier: #4A3A00;
+    --lushnje-bg: #EAF5F0; --lushnje: #1A4A3A;
+    --patos-bg: #F8EEE8; --patos: #5C2A1A;
+    --roskovec-bg: #EEF8E8; --roskovec: #1A4A0A;
+    --divjake-bg: #E8F4F8; --divjake: #0A3A5C;
+
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --radius: 4px;
+    --radius-lg: 8px;
+    --shadow: 0 1px 3px rgba(60,40,10,0.08), 0 4px 16px rgba(60,40,10,0.06);
+  }
+ 
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+ 
+  .site-header {
+    background: var(--text);
+    color: var(--bg);
+    padding: 3rem 2rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .site-header::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: 20%;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.025);
+  }
+  .header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+  .header-tag {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent2);
+    font-weight: 500;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .header-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #FFF8EE;
+    margin-bottom: 10px;
+  }
+  .header-title em { font-style: italic; color: var(--accent2); }
+  .header-sub {
+    color: rgba(245,240,232,0.55);
+    font-size: 14px;
+    font-weight: 300;
+    max-width: 480px;
+  }
+  .header-stats {
+    display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap;
+  }
+  .hstat { border-left: 2px solid var(--accent2); padding-left: 12px; }
+  .hstat-num { font-family: var(--font-display); font-size: 1.8rem; color: #FFF8EE; line-height: 1; }
+  .hstat-lbl { font-size: 11px; color: rgba(245,240,232,0.5); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+ 
+  .main { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+ 
+  .toolbar {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 14px 16px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow);
+  }
+  .search-wrap { flex: 1; min-width: 200px; position: relative; }
+  .search-wrap svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; opacity: 0.4; }
+  .search-wrap input {
+    width: 100%; padding: 8px 10px 8px 34px;
+    border: 1px solid var(--border2); border-radius: var(--radius);
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 14px;
+    outline: none; transition: border-color 0.15s;
+  }
+  .search-wrap input:focus { border-color: var(--accent); }
+  .search-wrap input::placeholder { color: var(--text3); }
+ 
+  .dialect-filters { display: flex; gap: 6px; flex-wrap: wrap; }
+  .df-btn {
+    font-size: 12px; padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border2);
+    background: transparent; color: var(--text2);
+    cursor: pointer; font-family: var(--font-body);
+    transition: all 0.15s; white-space: nowrap;
+  }
+  .df-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .df-btn.active { background: var(--text); color: var(--bg); border-color: var(--text); }
+ 
+  .add-btn {
+    display: flex; align-items: center; gap: 6px;
+    padding: 8px 16px; border-radius: var(--radius);
+    background: var(--accent); color: white;
+    border: none; cursor: pointer;
+    font-family: var(--font-body); font-size: 13px; font-weight: 500;
+    transition: background 0.15s; white-space: nowrap;
+  }
+  .add-btn:hover { background: var(--accent2); }
+  .add-btn svg { width: 14px; height: 14px; }
+ 
+  .sort-bar {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 1rem; font-size: 13px; color: var(--text3);
+  }
+  .sort-bar select {
+    font-family: var(--font-body); font-size: 13px;
+    border: 1px solid var(--border2); border-radius: var(--radius);
+    background: var(--surface); color: var(--text2); padding: 3px 8px;
+    cursor: pointer; outline: none;
+  }
+  #result-count { margin-left: auto; }
+ 
+  .word-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 14px;
+  }
+ 
+  .word-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.25s ease both;
+  }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .word-card:hover { border-color: var(--border2); transform: translateY(-2px); box-shadow: 0 4px 20px rgba(60,40,10,0.1); }
+  .word-card.open { border-color: var(--accent); }
+ 
+  .card-top { padding: 1rem 1.1rem 0.9rem; }
+  .card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+  .card-word { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--text); line-height: 1.1; }
+  .card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+  .d-badge {
+    font-size: 10px; padding: 3px 8px; border-radius: 10px;
+    font-weight: 500; letter-spacing: 0.5px; white-space: nowrap;
+    font-family: var(--font-body);
+  }
+  .card-type { font-size: 11px; color: var(--text3); font-style: italic; }
+  .card-short { font-size: 13px; color: var(--text2); margin-top: 6px; line-height: 1.5; }
+  .card-chevron { color: var(--text3); font-size: 14px; transition: transform 0.2s; margin-top: 2px; }
+  .word-card.open .card-chevron { transform: rotate(180deg); }
+ 
+  .card-body {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-top: 0px solid var(--border);
+  }
+  .word-card.open .card-body {
+    max-height: 500px;
+    border-top-width: 1px;
+  }
+  .card-body-inner { padding: 1rem 1.1rem; }
+  .detail-block { margin-bottom: 12px; }
+  .detail-block:last-child { margin-bottom: 0; }
+  .dlabel {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px;
+    color: var(--text3); font-weight: 500; margin-bottom: 4px;
+  }
+  .dtext { font-size: 13px; color: var(--text); line-height: 1.6; }
+  .dstd { font-size: 13px; color: var(--text2); }
+  .dexample {
+    font-size: 13px; font-style: italic; color: var(--text2);
+    background: var(--bg); border-left: 2px solid var(--accent2);
+    padding: 8px 12px; border-radius: 0 var(--radius) var(--radius) 0;
+    line-height: 1.6;
+  }
+ 
+  .empty-state { text-align: center; padding: 4rem 1rem; color: var(--text3); }
+  .empty-state svg { width: 48px; height: 48px; opacity: 0.3; margin-bottom: 12px; }
+  .empty-state p { font-size: 15px; }
+ 
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(20,12,0,0.55); z-index: 200;
+    align-items: center; justify-content: center; padding: 1rem;
+    backdrop-filter: blur(2px);
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--surface); border-radius: 12px;
+    border: 1px solid var(--border2);
+    width: 100%; max-width: 480px;
+    padding: 1.75rem; position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    animation: modalIn 0.2s ease;
+    max-height: 90vh; overflow-y: auto;
+  }
+  @keyframes modalIn { from { opacity: 0; transform: scale(0.97) translateY(8px); } to { opacity: 1; transform: none; } }
+  .modal-title {
+    font-family: var(--font-display); font-size: 1.4rem; font-weight: 600;
+    margin-bottom: 1.25rem; color: var(--text);
+    padding-bottom: 12px; border-bottom: 1px solid var(--border);
+  }
+  .close-btn {
+    position: absolute; top: 1rem; right: 1rem;
+    background: none; border: none; cursor: pointer;
+    color: var(--text3); font-size: 20px; line-height: 1;
+    padding: 4px; border-radius: var(--radius);
+  }
+  .close-btn:hover { color: var(--text); background: var(--bg2); }
+  .fg { margin-bottom: 14px; }
+  .fg label {
+    display: block; font-size: 12px; font-weight: 500;
+    color: var(--text2); margin-bottom: 5px; letter-spacing: 0.3px;
+  }
+  .fg label span { color: var(--accent); }
+  .fg input, .fg select, .fg textarea {
+    width: 100%; padding: 8px 10px;
+    border: 1px solid var(--border2); border-radius: var(--radius);
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 14px;
+    outline: none; transition: border-color 0.15s;
+  }
+  .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--accent); }
+  .fg textarea { resize: vertical; min-height: 72px; line-height: 1.5; }
+  .fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .modal-actions { display: flex; gap: 8px; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .btn-save {
+    flex: 1; padding: 10px; background: var(--accent); color: white;
+    border: none; border-radius: var(--radius); cursor: pointer;
+    font-family: var(--font-body); font-size: 14px; font-weight: 500;
+    transition: background 0.15s;
+  }
+  .btn-save:hover { background: var(--accent2); }
+  .btn-cancel {
+    padding: 10px 18px; background: none;
+    border: 1px solid var(--border2); border-radius: var(--radius);
+    color: var(--text2); cursor: pointer;
+    font-family: var(--font-body); font-size: 14px;
+    transition: all 0.15s;
+  }
+  .btn-cancel:hover { background: var(--bg2); }
+ 
+  .toast {
+    position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%) translateY(80px);
+    background: var(--text); color: var(--bg);
+    padding: 10px 20px; border-radius: 20px;
+    font-size: 13px; font-weight: 500;
+    transition: transform 0.3s ease;
+    z-index: 300; pointer-events: none; white-space: nowrap;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+ 
+  footer {
+    text-align: center; padding: 2rem;
+    font-size: 12px; color: var(--text3);
+    border-top: 1px solid var(--border); margin-top: 3rem;
+  }
+ 
+  @media (max-width: 600px) {
+    .site-header { padding: 2rem 1.25rem; }
+    .main { padding: 1.25rem; }
+    .word-grid { grid-template-columns: 1fr; }
+    .header-stats { gap: 1.25rem; }
+    .toolbar { flex-direction: column; align-items: stretch; }
+    .search-wrap { min-width: 0; }
+    .fg-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+ 
+<header class="site-header">
+  <div class="header-inner">
+    <span class="header-tag">Trashëgimia gjuhësore shqiptare</span>
+    <h1 class="header-title">Fjalori <em>Dialektore</em><br>Shqip</h1>
+    <p class="header-sub">Fjalë dhe shprehje nga zonat e Shqipërisë së Jugut — Vlorë, Sarandë, Gjirokastër, Fier dhe të tjera — me shpjegim të plotë në shqip.</p>
+    <div class="header-stats">
+      <div class="hstat"><div class="hstat-num" id="hs-total">0</div><div class="hstat-lbl">Fjalë gjithsej</div></div>
+      <div class="hstat"><div class="hstat-num" id="hs-zone1">0</div><div class="hstat-lbl">Vlorë &amp; rrethinat</div></div>
+      <div class="hstat"><div class="hstat-num" id="hs-zone2">0</div><div class="hstat-lbl">Sarandë &amp; rrethinat</div></div>
+      <div class="hstat"><div class="hstat-num" id="hs-other">0</div><div class="hstat-lbl">Zona të tjera</div></div>
+    </div>
+  </div>
+</header>
+ 
+<main class="main">
+  <div class="toolbar">
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="search" placeholder="Kërko fjalë, shpjegim..." />
+    </div>
+    <div class="dialect-filters">
+      <button class="df-btn active" data-d="all">Të gjitha</button>
+      <button class="df-btn" data-d="Vlorë">Vlorë</button>
+      <button class="df-btn" data-d="Orikum">Orikum</button>
+      <button class="df-btn" data-d="Himarë">Himarë</button>
+      <button class="df-btn" data-d="Dhërmi">Dhërmi</button>
+      <button class="df-btn" data-d="Jalë">Jalë</button>
+      <button class="df-btn" data-d="Palasë">Palasë</button>
+      <button class="df-btn" data-d="Borsh">Borsh</button>
+      <button class="df-btn" data-d="Qeparo">Qeparo</button>
+      <button class="df-btn" data-d="Lukovë">Lukovë</button>
+      <button class="df-btn" data-d="Sarandë">Sarandë</button>
+      <button class="df-btn" data-d="Ksamil">Ksamil</button>
+      <button class="df-btn" data-d="Delvinë">Delvinë</button>
+      <button class="df-btn" data-d="Konispol">Konispol</button>
+      <button class="df-btn" data-d="Gjirokastër">Gjirokastër</button>
+      <button class="df-btn" data-d="Tepelenë">Tepelenë</button>
+      <button class="df-btn" data-d="Përmet">Përmet</button>
+      <button class="df-btn" data-d="Memaliaj">Memaliaj</button>
+      <button class="df-btn" data-d="Fier">Fier</button>
+      <button class="df-btn" data-d="Lushnjë">Lushnjë</button>
+      <button class="df-btn" data-d="Patos">Patos</button>
+      <button class="df-btn" data-d="Roskovec">Roskovec</button>
+      <button class="df-btn" data-d="Divjakë">Divjakë</button>
+    </div>
+    <button class="add-btn" id="open-modal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+      Shto fjalë
+    </button>
+  </div>
+ 
+  <div class="sort-bar">
+    <span>Rendit:</span>
+    <select id="sort-select">
+      <option value="alpha">A – Zh (alfabetik)</option>
+      <option value="dialect">Sipas zonës</option>
+      <option value="newest">Të shtuar së fundmi</option>
+    </select>
+    <span id="result-count" style="color:var(--text3);font-size:13px;"></span>
+  </div>
+ 
+  <div class="word-grid" id="grid"></div>
+  <div class="empty-state" id="empty" style="display:none;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <p>Asnjë fjalë nuk u gjet.<br>Provo kërkesë tjetër.</p>
+  </div>
+</main>
+ 
+<!-- Add Word Modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="close-btn" id="close-modal" aria-label="Mbyll">✕</button>
+    <h2 class="modal-title" id="modal-title">Shto fjalë të re</h2>
+    <div class="fg">
+      <label>Fjala dialektore <span>*</span></label>
+      <input type="text" id="f-word" placeholder="p.sh. çikë" />
+    </div>
+    <div class="fg-row">
+      <div class="fg">
+        <label>Zona <span>*</span></label>
+        <select id="f-dialect">
+          <option>Vlorë</option>
+          <option>Orikum</option>
+          <option>Himarë</option>
+          <option>Dhërmi</option>
+          <option>Jalë</option>
+          <option>Palasë</option>
+          <option>Borsh</option>
+          <option>Qeparo</option>
+          <option>Lukovë</option>
+          <option>Sarandë</option>
+          <option>Ksamil</option>
+          <option>Delvinë</option>
+          <option>Konispol</option>
+          <option>Gjirokastër</option>
+          <option>Tepelenë</option>
+          <option>Përmet</option>
+          <option>Memaliaj</option>
+          <option>Fier</option>
+          <option>Lushnjë</option>
+          <option>Patos</option>
+          <option>Roskovec</option>
+          <option>Divjakë</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Lloji i fjalës</label>
+        <select id="f-type">
+          <option>folje</option>
+          <option>emër</option>
+          <option>mbiemër</option>
+          <option>ndajfolje</option>
+          <option>pasthirrmë</option>
+          <option>shprehje</option>
+          <option>lidhëz</option>
+          <option>përemër</option>
+        </select>
+      </div>
+    </div>
+    <div class="fg">
+      <label>Shpjegimi i shkurtër <span>*</span></label>
+      <input type="text" id="f-short" placeholder="Kuptimi kryesor i fjalës..." />
+    </div>
+    <div class="fg">
+      <label>Shpjegimi i plotë</label>
+      <textarea id="f-full" placeholder="Shpjegim i detajuar — origjina, konteksti, rajoni..."></textarea>
+    </div>
+    <div class="fg">
+      <label>Ekuivalenti në shqipen standarde</label>
+      <input type="text" id="f-std" placeholder="Si thuhet në shqipen letrare..." />
+    </div>
+    <div class="fg">
+      <label>Shembull në fjali</label>
+      <textarea id="f-example" placeholder="Fjali e plotë me fjalën dialektore..." style="min-height:60px;"></textarea>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-save" id="save-btn">Ruaj fjalën</button>
+      <button class="btn-cancel" id="cancel-btn">Anulo</button>
+    </div>
+  </div>
+</div>
+ 
+<div class="toast" id="toast"></div>
+ 
+<footer>
+  <p>Fjalori Dialektore Shqip &mdash; Ruaj dhe ndaj pasurinë gjuhësore të shqipes</p>
+</footer>
+ 
+<script>
+const ZONE_COLORS = {
+  'Vlorë':       { bg: '#E8F0F8', color: '#1A3A5C' },
+  'Orikum':      { bg: '#E4F2EA', color: '#1A4A2E' },
+  'Himarë':      { bg: '#F5EDDA', color: '#5C3A00' },
+  'Dhërmi':      { bg: '#F2E4EE', color: '#4A1A3A' },
+  'Jalë':        { bg: '#F0EAF8', color: '#3A1A5C' },
+  'Palasë':      { bg: '#FDE8E0', color: '#6B1A0A' },
+  'Borsh':       { bg: '#E8F5E4', color: '#1A4A10' },
+  'Qeparo':      { bg: '#EEF0F8', color: '#1A2A5C' },
+  'Lukovë':      { bg: '#F8EDE8', color: '#5C2A1A' },
+  'Sarandë':     { bg: '#E4EEF2', color: '#1A3A4A' },
+  'Ksamil':      { bg: '#E8F8F0', color: '#0A4A2E' },
+  'Delvinë':     { bg: '#F5EEF8', color: '#3A1A5C' },
+  'Konispol':    { bg: '#FFF0E0', color: '#5C3A00' },
+  'Gjirokastër': { bg: '#EEE8F5', color: '#2A1A5C' },
+  'Tepelenë':    { bg: '#F0F5E8', color: '#2A4A1A' },
+  'Përmet':      { bg: '#F8E8F0', color: '#5C1A3A' },
+  'Memaliaj':    { bg: '#E8F0EE', color: '#1A4A3A' },
+  'Fier':        { bg: '#F5F0E0', color: '#4A3A00' },
+  'Lushnjë':     { bg: '#EAF5F0', color: '#1A4A3A' },
+  'Patos':       { bg: '#F8EEE8', color: '#5C2A1A' },
+  'Roskovec':    { bg: '#EEF8E8', color: '#1A4A0A' },
+  'Divjakë':     { bg: '#E8F4F8', color: '#0A3A5C' },
+};
+
+const VLORE_GROUP = ['Vlorë','Orikum','Himarë','Dhërmi','Jalë','Palasë','Borsh','Qeparo','Lukovë'];
+const SARANDE_GROUP = ['Sarandë','Ksamil','Delvinë','Konispol'];
+
+const INIT_WORDS = [
+  // Vlorë
+  { word:"Çikë", dialect:"Vlorë", type:"emër", short:"vajzë e re", full:"Përdoret në të folmen e Vlorës për të treguar një vajzë të re ose të vogël. Ka nuancë dashamirëse.", std:"vajzë", example:"Sa çikë e bukur!", ts:1 },
+  { word:"Gaxhë", dialect:"Vlorë", type:"emër", short:"i huaj, person nga jashtë", full:"Fjalë që tregon dikë që nuk është nga zona, një të huaj ose njeri që nuk njihet.", std:"i huaj", example:"Kush është ai gaxhë atje?", ts:2 },
+  { word:"Kallamoq", dialect:"Vlorë", type:"emër", short:"misër i zier", full:"Misri i zier, ushqim tradicional i zonës. Shpesh hahet në mëngjes ose si rostiçeri.", std:"misër i zier", example:"Na solli kallamoq të nxehtë nga tregu.", ts:3 },
+  { word:"Ngujëm", dialect:"Vlorë", type:"folje", short:"u mbyllem në shtëpi", full:"Folje që shpreh veprimin e mbylljes a izolimit të vetvetes brenda shtëpisë.", std:"u mbyllem / u izolova", example:"U ngujëm gjithë ditën nga shiu.", ts:4 },
+  { word:"Bobo", dialect:"Vlorë", type:"pasthirrmë", short:"shprehje habie", full:"Pasthirrmë e habitjes, të ngjashme me 'o zot' ose 'moj'. Shumë e zakonshme në të folmen e Vlorës.", std:"o zot / moj", example:"Bobo, çfarë bëre ti tani!", ts:5 },
+  { word:"Pispillosur", dialect:"Vlorë", type:"mbiemër", short:"e veshur me kujdes, e zbukuruar", full:"Mbiemër që tregon dikë të veshur me shumë kujdes dhe elegancë, shpesh me nuancë talljeje ose admirimi.", std:"e zbukuruar / e rregulluar bukur", example:"Erdhi e gjitha pispillosur në mbledhje.", ts:6 },
+  { word:"Qeder", dialect:"Vlorë", type:"emër", short:"mërzi, trishtim", full:"Nga turqishtja 'keder'. Ndjenjë mërzie dhe trishtimi të thellë. Përdoret shumë në jug të Shqipërisë.", std:"mërzi / trishtim", example:"Më zuri qederi kur e dëgjova lajmin.", ts:7 },
+  { word:"Harem", dialect:"Vlorë", type:"emër", short:"turp", full:"Fjalë me origjinë arabe-turke. Nënkupton turpin, diçka të padenjë ose të ndaluar moralisht.", std:"turp", example:"Harem! Si mund ta bësh ashtu?", ts:8 },
+  { word:"Xhade", dialect:"Vlorë", type:"emër", short:"rrugë kryesore", full:"Nga turqishtja. Tregon rrugën kryesore ose bulevardin e qytetit.", std:"rrugë kryesore / bulevard", example:"U takuam te xhadeja e vjetër.", ts:9 },
+  { word:"Bregas", dialect:"Vlorë", type:"emër", short:"banor i bregdetit", full:"Person që jeton ose vjen nga bregu i detit. Ka konotacion identiteti vendor.", std:"banor bregdeti", example:"Ai është bregas i vjetër, e njeh detin si doren e vet.", ts:10 },
+  // Orikum
+  { word:"Llaçkë", dialect:"Orikum", type:"emër", short:"baltë e hollë", full:"Baltë e lëngët dhe e hollë, zakonisht pranë bregut ose pas shiut.", std:"baltë e hollë", example:"Fëmijët luanin me llaçkë pranë lumit.", ts:11 },
+  { word:"Vringëllon", dialect:"Orikum", type:"folje", short:"bën zhurmë të fortë", full:"Folje onomatopeike që tregon një zhurmë të fortë dhe të mprehur, si ajo e xhamit ose metalit.", std:"bën zhurmë / tingëllon fort", example:"Dera vringëlloi kur e mbyllën me forcë.", ts:12 },
+  { word:"Krodh", dialect:"Orikum", type:"mbiemër", short:"i egër, i ashpër", full:"Mbiemër që tregon dikë ose diçka të egër, të papunuar, të ashpër në karakter ose pamje.", std:"i egër / i ashpër", example:"Ishte njeri krodh, nuk fliste me askënd.", ts:13 },
+  { word:"Shkallafit", dialect:"Orikum", type:"folje", short:"rrëzon diçka, e shkelmon", full:"Folje që tregon veprimin e rrëzimit të diçkaje me forcë ose rastësisht.", std:"rrëzon / hedh poshtë", example:"Shkallafit gotën nga tryeza.", ts:14 },
+  { word:"Hallakat", dialect:"Orikum", type:"folje", short:"endet pa qëllim", full:"Folje që tregon endjen kotë, pa drejtim a qëllim, zakonisht me nuancë negative.", std:"endet / bredh kot", example:"Gjithë ditën hallakat nëpër fshat.", ts:15 },
+  // Himarë
+  { word:"Piro", dialect:"Himarë", type:"emër", short:"djalë i ri", full:"Emër i zakonshëm në zonën e Himarës, por edhe fjalë që tregon një djalë të ri e gjallëri.", std:"djalë i ri", example:"Piro erdhi herët në mëngjes.", ts:16 },
+  { word:"Vono", dialect:"Himarë", type:"emër", short:"vonesë", full:"Emër që tregon vonimin, mosardhjen në kohë. I zakonshëm në të folmen e bregdetit jugor.", std:"vonesë", example:"Erdhi me vono prej dy orësh.", ts:17 },
+  { word:"Varkar", dialect:"Himarë", type:"emër", short:"peshkatar, ai që mban varkë", full:"Person që punon me varkë, peshkatar ose lundërtar. I lidhur me traditën detare të Himarës.", std:"peshkatar / lundërtar", example:"Varkari u nis herët para agimit.", ts:18 },
+  { word:"Picar", dialect:"Himarë", type:"mbiemër", short:"i djegur nga dielli", full:"Mbiemër që tregon lëkurën e djegur ose të errësuar nga dielli, tipike për njerëzit e bregdetit.", std:"i djegur nga dielli / i errët nga dielli", example:"U kthye nga deti i gjithë picar.", ts:19 },
+  { word:"Papo", dialect:"Himarë", type:"emër", short:"gjysh", full:"Emër familjar për gjyshin. I zakonshëm në të folmen greke-shqipe të Himarës dhe bregdetit.", std:"gjysh", example:"Papo na tregonte histori të vjetra.", ts:20 },
+  // Dhërmi
+  { word:"Rromuz", dialect:"Dhërmi", type:"emër", short:"zhurmë e madhe, rrëmujë", full:"Zhurmë e madhe, kaos dhe rrëmujë njerëzish. Ngjashëm me 'rrëmujë' por me intensitet më të madh.", std:"zhurmë / rrëmujë", example:"Çfarë rromuz bënin fëmijët!", ts:21 },
+  { word:"Bërdhak", dialect:"Dhërmi", type:"emër", short:"gotë e madhe", full:"Enë e madhe për pije, si gotë ose kupë e madhe. Fjalë e vjetër popullore.", std:"gotë e madhe / kupë", example:"Hëngri dy bërdhakë ujë njëherësh.", ts:22 },
+  { word:"Nëmur", dialect:"Dhërmi", type:"mbiemër", short:"i zymtë, i vrenjtur", full:"Mbiemër që tregon dikë me fytyrim të zymtë, të vrenjtur ose të hidhëruar.", std:"i zymtë / i vrenjtur", example:"Ishte i gjithë nëmur sot, nuk fliste.", ts:23 },
+  { word:"Vithis", dialect:"Dhërmi", type:"folje", short:"rrëshqet, shkatërrron", full:"Folje që tregon rrëshqitjen ose rënien pa kontroll, si në terren të rrëshqitshëm.", std:"rrëshqet / bie", example:"Vithisi poshtë shkëmbit.", ts:24 },
+  { word:"Sorkadhe", dialect:"Dhërmi", type:"emër", short:"kaproll, dre femër", full:"Emër për kaprollen ose drenin femër. Fjalë e vjetër shqipe e ruajtur në këtë zonë.", std:"kaproll / dre", example:"Pashë një sorkadhe në mal.", ts:25 },
+  // Jalë
+  { word:"Piskamë", dialect:"Jalë", type:"emër", short:"britmë e lartë", full:"Britmë e mprehtë dhe e fortë, zakonisht nga frika ose dhimbja.", std:"britmë / thirrje", example:"Dëgjova një piskamë nga poshtë.", ts:26 },
+  { word:"Cermë", dialect:"Jalë", type:"emër", short:"vapë e fortë", full:"Nxehtësia e madhe e verës, vapa e rëndë. Tipike për zonën bregdetare jugore.", std:"vapë e madhe", example:"Cermë e madhe sot, as frymë nuk merr.", ts:27 },
+  { word:"Pojatë", dialect:"Jalë", type:"emër", short:"kasolle, strehë bagëtish", full:"Ndërtesë e vogël dhe primitive, strehë për bagëti ose ruajtje mjetesh bujqësore.", std:"kasolle / strehë", example:"Delet flenë në pojatë gjatë dimrit.", ts:28 },
+  { word:"Hall", dialect:"Jalë", type:"emër", short:"problem, shqetësim", full:"Nga turqishtja. Problem i madh, shqetësim ose vështirësi jetesore. Shumë i zakonshëm në shqipen jugore.", std:"problem / vështirësi", example:"Kam shumë hall këto ditë me punën.", ts:29 },
+  { word:"Flladit", dialect:"Jalë", type:"folje", short:"freskon, sjell erë të lehtë", full:"Folje që tregon flladin e lehtë, erën e freskët që freskon në vapë.", std:"freskon / sjell fllad", example:"Era e detit flladit çdo mbrëmje.", ts:30 },
+  // Palasë
+  { word:"Kallmet", dialect:"Palasë", type:"emër", short:"tokë me gurë, terren guror", full:"Terren i ashpër dhe guror, tokë jo e punueshme për bujqësi.", std:"terren guror / tokë guri", example:"Kallmeti i malit nuk mbin asgjë.", ts:31 },
+  { word:"Bregore", dialect:"Palasë", type:"emër", short:"kodër e vogël", full:"Kodër e vogël ose lartësi e vogël tokësore pranë bregut.", std:"kodër e vogël / breg", example:"U ngjitëm te bregoria për të parë detin.", ts:32 },
+  { word:"Përhumbur", dialect:"Palasë", type:"mbiemër", short:"i hutuar, i humbur në mendime", full:"Mbiemër që tregon dikë të humbur në mendime, të mos ketë vëmendjen këtu.", std:"i hutuar / i humbur / i menduar", example:"Ishte i gjithë përhumbur, s'dëgjonte asgjë.", ts:33 },
+  { word:"Gjegj", dialect:"Palasë", type:"folje", short:"dëgjoj, kuptoj", full:"Folje e lashtë shqipe me kuptimin e dëgjimit dhe kuptimit. E ruajtur në dialektet jugore.", std:"dëgjoj / kuptoj", example:"Gjegj ç'po të them tani!", ts:34 },
+  { word:"Xurxull", dialect:"Palasë", type:"emër", short:"rrëmujë, kaos", full:"Rrëmujë e madhe, gjendje kaotike me shumë zhurmë dhe çrregullim.", std:"rrëmujë / kaos", example:"Ç'xurxull bëtë sot në shtëpi?", ts:35 },
+  // Borsh
+  { word:"Bufe", dialect:"Borsh", type:"emër", short:"enë balte", full:"Enë tradicionale prej balte e punuar me dorë. Pjesë e trashëgimisë artizanale të zonës.", std:"enë balte", example:"Nëna gatuante në bufenë e vjetër.", ts:36 },
+  { word:"Kullotë", dialect:"Borsh", type:"emër", short:"livadh për bagëti", full:"Livadhi ku kullosin bagëtitë. Fjalë e zakonshme në zonat bujqësore-blegtorale.", std:"livadh / kullotë", example:"Delet janë në kullotë tani.", ts:37 },
+  { word:"Vatë", dialect:"Borsh", type:"emër", short:"pambuk", full:"Fjalë e vjetër për pambukun, përdorur edhe për materiale të buta.", std:"pambuk", example:"Mbushi plagën me vatë.", ts:38 },
+  { word:"Harbim", dialect:"Borsh", type:"emër", short:"çmenduri, sjellje e egër", full:"Sjellje e çmendur ose e papërmbajtshme, humbje e kontrollit.", std:"çmenduri / sjellje e egër", example:"Ç'harbim ishte ai sot!", ts:39 },
+  { word:"Faqoll", dialect:"Borsh", type:"mbiemër", short:"fytyrëbardhë, i paturpshëm", full:"Mbiemër që tregon dikë të paturpshëm ose pa ndrojtje, që vepron pa u skuqur.", std:"i paturpshëm / i padrobitur", example:"Ai faqoll s'ka fare turp.", ts:40 },
+  // Qeparo
+  { word:"Kudhër", dialect:"Qeparo", type:"emër", short:"vegël hekuri, sëpatë", full:"Vegël tradicionale pune prej hekuri, e përdorur për prerje druri ose punë rënde.", std:"vegël hekuri / sëpatë", example:"Mori kudhrin të priste drutë.", ts:41 },
+  { word:"Shtëllungë", dialect:"Qeparo", type:"emër", short:"re tymi, mjegull tymi", full:"Tufë ose re e trashë tymi, zakonisht nga zjarri ose duhani.", std:"re tymi / mjegull tymi", example:"Shtëllunga e tymit mbuloi fshatin.", ts:42 },
+  { word:"Govatë", dialect:"Qeparo", type:"emër", short:"enë e madhe, legen", full:"Enë e madhe e rrumbullakët, zakonisht për larje ose ruajtje uji.", std:"legen / enë e madhe", example:"Mbushi govatën me ujë të ngrohtë.", ts:43 },
+  { word:"Hov", dialect:"Qeparo", type:"emër", short:"vrull, shpejtësi e madhe", full:"Vrull dhe energji e madhe në veprim. Ngjashëm me 'hovit'.", std:"vrull / shpejtësi", example:"U hodh me hov mbi valë.", ts:44 },
+  { word:"Kacavjerr", dialect:"Qeparo", type:"folje", short:"ngjitet, kapërcen lart", full:"Folje që tregon ngjitjen me vështirësi, duke u kapur pas gjërave për të ngjetur lart.", std:"ngjitet / kapërcen", example:"Kacavjerri murin pa frikë.", ts:45 },
+  // Lukovë
+  { word:"Rrëke", dialect:"Lukovë", type:"emër", short:"ujë i rrjedhshëm, rrymë", full:"Rrymë e shpejtë uji, zakonisht pas shiut ose pranë malit.", std:"rrymë uji / rrëke", example:"Rrëka e malit solli baltë.", ts:46 },
+  { word:"Cingër", dialect:"Lukovë", type:"emër", short:"tingull i hollë dhe i mprehtë", full:"Tingull i hollë dhe i mprehtë, zakonisht nga metali ose xhami.", std:"tingull i hollë", example:"Dëgjova një cingër të vogël.", ts:47 },
+  { word:"Pérdac", dialect:"Lukovë", type:"mbiemër", short:"dembel, i plogët", full:"Mbiemër për dikë të dembelur, pa dëshirë për punë ose lëvizje.", std:"dembel / i plogët", example:"Ai përtac nuk punon kurrë.", ts:48 },
+  { word:"Gurgullon", dialect:"Lukovë", type:"folje", short:"rrjedh me zhurmë, gurgullon", full:"Folje onomatopeike për tingullin e ujit që rrjedh nëpër gurë ose kanale.", std:"gurgullon / rrjedh me zhurmë", example:"Burimi gurgullon pranë shtëpisë.", ts:49 },
+  { word:"Mërmërimë", dialect:"Lukovë", type:"emër", short:"zë i ulët, pëshpëritje", full:"Zë i ulët dhe i pakuptueshëm, si murmurima e njerëzve ose e natyrës.", std:"murmurë / zë i ulët", example:"Dëgjova mërmërimë nga dhoma tjetër.", ts:50 },
+  // Sarandë
+  { word:"Çupëlinë", dialect:"Sarandë", type:"emër", short:"vajzë e vogël, çupëlushë", full:"Emër dashamirës për një vajzë të vogël. Shumë i zakonshëm në të folmen e Sarandës.", std:"vajzë e vogël", example:"Çupëlina e tij ishte shumë e zgjuar.", ts:51 },
+  { word:"Zallahí", dialect:"Sarandë", type:"emër", short:"rrëmujë, kaos", full:"Rrëmujë e madhe dhe zhurmë. Fjalë me origjinë sllave e integruar në të folmen lokale.", std:"rrëmujë / kaos", example:"Ç'zallahi bënë ata fëmijë!", ts:52 },
+  { word:"Kallajxhi", dialect:"Sarandë", type:"emër", short:"riparues enësh kallaji", full:"Zejtar i vjetër që riparon enët metalike. Zanatli tradicional i qyteteve shqiptare.", std:"kallajxhi / riparues enësh", example:"Kallajxhiu vinte çdo vit në fshat.", ts:53 },
+  { word:"Mëhallë", dialect:"Sarandë", type:"emër", short:"lagje, pjesë e qytetit", full:"Nga turqishtja 'mahalle'. Lagje ose pjesë e qytetit me identitet të caktuar.", std:"lagje", example:"Jetojmë në mëhallën e vjetër.", ts:54 },
+  { word:"Hurdhë", dialect:"Sarandë", type:"emër", short:"pellg uji, gropë me ujë", full:"Pellg i vogël natyror ose i gërmuar ku mblidhet uji i shiut.", std:"pellg / gropë me ujë", example:"Fëmijët luanin pranë hurdhës.", ts:55 },
+  // Ksamil
+  { word:"Peshkall", dialect:"Ksamil", type:"emër", short:"rrjetë peshkimi", full:"Rrjetë tradicionale për kapjen e peshkut, e lidhur me traditën detare të Ksamilit.", std:"rrjetë peshkimi", example:"Hedhën peshkallin herët në mëngjes.", ts:56 },
+  { word:"Vringëllimë", dialect:"Ksamil", type:"emër", short:"tingull i fortë metalik", full:"Zhurmë e fortë dhe e mprehtë, si ajo e ziles ose metalit të goditur.", std:"tingull i fortë / zile", example:"Vringëllima e ankorit u dëgjua larg.", ts:57 },
+  { word:"Përmallim", dialect:"Ksamil", type:"emër", short:"ndjenjë malli, nostalgjia", full:"Ndjenja e thellë e mallit për vendin ose njerëzit e dashur larg.", std:"mall / nostalgjia", example:"Më kap përmallimi kur mendoj shtëpinë.", ts:58 },
+  { word:"Fllad", dialect:"Ksamil", type:"emër", short:"erë e lehtë dhe e freskët", full:"Erë e lehtë dhe e këndshme, sidomos pranë detit. Sjell freski në vapë.", std:"fllad / erë e lehtë", example:"Flladet e mbrëmjes ishin të këndshëm.", ts:59 },
+  { word:"Përvëlim", dialect:"Ksamil", type:"emër", short:"nxehtësi e fortë, djegie", full:"Ndjesia e nxehtësisë së madhe që djeg, sidomos nga dielli ose zjarri.", std:"djegie / nxehtësi e fortë", example:"Përvëlimi i diellit ishte i padurueshëm.", ts:60 },
+  // Delvinë
+  { word:"Gajret", dialect:"Delvinë", type:"emër", short:"kurajë, zell, energji", full:"Nga turqishtja 'gayret'. Kurajë, zell dhe energji për të bërë diçka.", std:"kurajë / zell", example:"Bëj gajret dhe do të arriesh!", ts:61 },
+  { word:"Zbor", dialect:"Delvinë", type:"emër", short:"mbledhje, tubim njerëzish", full:"Mbledhje ose tubim i njerëzve për diskutim ose vendimmarrje. Fjalë sllave e integruar.", std:"mbledhje / tubim", example:"Zbori i fshatit vendosi bashkërisht.", ts:62 },
+  { word:"Cergë", dialect:"Delvinë", type:"emër", short:"mbulesë leshi, batanije", full:"Mbulesë e trashë prej leshi, e punuar me dorë. Objekt i domosdoshëm në familjet tradicionale.", std:"batanije / mbulesë leshi", example:"U mbulua me cergën e vjetër.", ts:63 },
+  { word:"Mëndafsh", dialect:"Delvinë", type:"emër", short:"stof i butë, mëndafsh", full:"Material i butë dhe i lëmuar, origjinalisht mëndafshi natyror. Simbol i bukurisë dhe pasurisë.", std:"mëndafsh / stof i butë", example:"Fustani ishte prej mëndafshi të mirë.", ts:64 },
+  { word:"Hekuran", dialect:"Delvinë", type:"emër", short:"njeri i fortë, i ashpër", full:"Mbiemër ose nofkë për dikë shumë të fortë fizikisht ose në karakter.", std:"i fortë / i qëndrueshëm", example:"Ai hekuran punon pa pushim.", ts:65 },
+  // Konispol
+  { word:"Nikoqir", dialect:"Konispol", type:"emër", short:"i zoti i shtëpisë, kryefamiljari", full:"Nga greqishtja 'noikokyris'. Kreu i familjes, burri i shtëpisë, ai që menaxhon gjithçka.", std:"kryefamiljar / i zoti i shtëpisë", example:"Nikoqiri e priti me shumë nder.", ts:66 },
+  { word:"Dovlet", dialect:"Konispol", type:"emër", short:"pasuri, mirëqenie", full:"Nga turqishtja 'devlet'. Pasuri, bekim dhe mirëqenie materiale.", std:"pasuri / mirëqenie", example:"Zoti i dha dovlet të madh.", ts:67 },
+  { word:"Hatër", dialect:"Konispol", type:"emër", short:"respekt, nderim", full:"Nga turqishtja 'hatır'. Respekti dhe nderi ndaj dikujt, por edhe favori i bërë.", std:"respekt / nderim / favor", example:"E bëra për hatrin tënd.", ts:68 },
+  { word:"Sevda", dialect:"Konispol", type:"emër", short:"dashuri e madhe, pasion", full:"Nga turqishtja 'sevda'. Dashuri e thellë dhe pasion romantik. Fjalë poetike.", std:"dashuri e madhe / pasion", example:"Sevdaja e tij ishte e vjetër sa malet.", ts:69 },
+  { word:"Amanet", dialect:"Konispol", type:"emër", short:"porosi e fundit, trashëgim", full:"Nga arabishtja-turqishtja 'emanet'. Porosi e dhënë me shumë rëndësi, shpesh para vdekjes.", std:"porosi / trashëgim shpirtëror", example:"Kjo tokë është amanet i gjyshit.", ts:70 },
+  // Gjirokastër
+  { word:"Qilar", dialect:"Gjirokastër", type:"emër", short:"depo ushqimesh, qilar", full:"Dhomë ose hapësirë ku ruhen ushqimet dhe rezervat shtëpiake. Tipike për shtëpitë gjirokastrite.", std:"qilar / depo ushqimesh", example:"Qilari i gjyshes ishte gjithmonë plot.", ts:71 },
+  { word:"Mucë", dialect:"Gjirokastër", type:"emër", short:"mace", full:"Emër popullor dhe dashamirës për macen. I zakonshëm në dialektet jugore.", std:"mace", example:"Mucja e shtëpisë zuri një mi.", ts:72 },
+  { word:"Hijezi", dialect:"Gjirokastër", type:"emër", short:"bukuri, hijeshi", full:"Bukuri dhe hijeshi natyrore, elegancë e lindur. Fjalë poetike e zakonshme në jug.", std:"bukuri / hijeshi", example:"Hijezinë e asaj greje nuk e harrova kurrë.", ts:73 },
+  { word:"Pazar", dialect:"Gjirokastër", type:"emër", short:"treg, shesh tregtar", full:"Nga turqishtja 'pazar'. Tregu ku blihen dhe shiten mallra. Pazar i Gjirokastrës është i famshëm.", std:"treg", example:"Shkuam në pazar të hënën.", ts:74 },
+  { word:"Vërri", dialect:"Gjirokastër", type:"emër", short:"fushë e ulët, vend i ulët", full:"Vend i ulët, zakonisht tokë e lulëzuar pranë lumit ose në fund të luginës.", std:"fushë e ulët / luginë", example:"Vërri i lumit ishte plot lule.", ts:75 },
+  // Tepelenë
+  { word:"Kallkan", dialect:"Tepelenë", type:"emër", short:"shumë ftohtë, acari i madh", full:"I ftohtë i madh dhe i papërmbajtshëm, zakonisht dimëror. Shpreh temperaturë të ulët ekstreme.", std:"acar i madh / shumë ftohtë", example:"Doli jashtë me kallkan të madh.", ts:76 },
+  { word:"Hallall", dialect:"Tepelenë", type:"emër", short:"e merituar, e lejuar", full:"Nga arabishtja-turqishtja 'helal'. Diçka e fituar ndershmërisht dhe e merituar plotësisht.", std:"e merituar / e ndershme", example:"Hallall të qoftë puna!", ts:77 },
+  { word:"Krrabë", dialect:"Tepelenë", type:"emër", short:"shkop, degë e trashë", full:"Shkop i trashë druri ose degë e fortë. Përdoret edhe si mjet mbrojtës.", std:"shkop / degë", example:"Mori krrabën dhe u nis në mal.", ts:78 },
+  { word:"Kulluf", dialect:"Tepelenë", type:"emër", short:"tufë flokësh, kasarole", full:"Tufë e madhe flokësh ose grumbull i çrregullt i diçkaje.", std:"tufë / kasarole flokësh", example:"Kishte kullufe të mëdha flokësh.", ts:79 },
+  { word:"Çakërrqejf", dialect:"Tepelenë", type:"mbiemër", short:"pak i dehur, i gëzuar nga vera", full:"Gjendja e gëzimit të lehtë nga pirja e verës ose rakie, pa qenë plotësisht i dehur.", std:"pak i dehur / në gjendje të mirë", example:"Ishte çakërrqejf pas darkës.", ts:80 },
+  // Përmet
+  { word:"Gliko", dialect:"Përmet", type:"emër", short:"ëmbëlsirë tradicionale", full:"Ëmbëlsira tradicionale shqiptare e bërë me fruta të ziera në sheqer. Gliko i Përmetit është i famshëm.", std:"ëmbëlsirë / reçel i trashë", example:"Gliko e Përmetit nuk ka të ngjashëm.", ts:81 },
+  { word:"Zoi", dialect:"Përmet", type:"emër", short:"jetë, ekzistencë", full:"Nga greqishtja 'zoi'. Jeta, ekzistenca. Fjalë poetike e zakonshme në jug.", std:"jetë", example:"Kjo zoi e bukur nuk kthehet.", ts:82 },
+  { word:"Këndell", dialect:"Përmet", type:"folje", short:"merr veten, ngrihet", full:"Folje që tregon rikuperimin, marrjen e vetes pas lodhjes ose sëmundjes.", std:"merr veten / rikuperohet", example:"U këndell pak pas gjumit.", ts:83 },
+  { word:"Trahana", dialect:"Përmet", type:"emër", short:"ushqim tradicional me miell", full:"Ushqim tradicional i bërë nga mielli i thartë ose gruri i tharë. Gatim i lashtë.", std:"trahana / ushqim tradicional", example:"Supa me trahanë ngroh shpirtin.", ts:84 },
+  { word:"Mëndjehollë", dialect:"Përmet", type:"mbiemër", short:"i zgjuar, i mençur", full:"Mbiemër që tregon inteligjencë të lartë dhe zgjuarsi, dikë me mendje të hollë.", std:"i zgjuar / i mençur", example:"Ai mëndjehollë gjeti zgjidhjen menjëherë.", ts:85 },
+  // Memaliaj
+  { word:"Bulmet", dialect:"Memaliaj", type:"emër", short:"produkte qumështi", full:"Të gjitha produktet që vijnë nga qumështi: djathë, kos, gjalpë. Fjalë me origjinë sllave.", std:"produkte qumështi / bulmet", example:"Tregu kishte bulmet të freskët.", ts:86 },
+  { word:"Kovaç", dialect:"Memaliaj", type:"emër", short:"farkëtar, punues hekuri", full:"Zejtar tradicional që punon hekurin në zjarr. Profesion i lashtë dhe i rëndësishëm.", std:"farkëtar", example:"Kovaçi punonte gjithë ditën te furra.", ts:87 },
+  { word:"Gërdallë", dialect:"Memaliaj", type:"emër", short:"njeri shumë i hollë", full:"Mbiemër ose emër për dikë shumë të hollë fizikisht, zakonisht me nuancë përshkruese.", std:"shumë i hollë / i thatë", example:"Ai gërdallë nuk ha asgjë.", ts:88 },
+  { word:"Murrlan", dialect:"Memaliaj", type:"emër", short:"erë e fortë dhe e pakëndshme", full:"Era e fortë dhe e bezdisshme që vjen nga drejtime të caktuara. Shpesh e lidhur me erën jugore.", std:"erë e fortë / erë e pakëndshme", example:"Murrlanin e ndjeva prej larg.", ts:89 },
+  { word:"Zall", dialect:"Memaliaj", type:"emër", short:"gurë lumi, breg me gurë", full:"Gurët e vegjël dhe të rrumbullakët të lumit, bregu guror i lumit.", std:"gurë lumi / breg guror", example:"Fëmijët luanin te zalli i lumit.", ts:90 },
+  // Fier
+  { word:"Cakmak", dialect:"Fier", type:"emër", short:"ndezës zjarri, çakmak", full:"Nga turqishtja 'çakmak'. Ndezësi i zjarrit ose i cigareve. Fjalë e zakonshme në të gjithë Shqipërinë.", std:"ndezës zjarri", example:"Humb cakmakun tim.", ts:91 },
+  { word:"Xhezve", dialect:"Fier", type:"emër", short:"enë kafeje, xhezve", full:"Enë e vogël metalike për gatimin e kafes turke. Pjesë e kulturës tradicionale shqiptare.", std:"xhezve / enë kafeje", example:"Vuri xhezven në zjarr.", ts:92 },
+  { word:"Shkreh", dialect:"Fier", type:"folje", short:"çlodhet, pushon", full:"Folje që tregon çlodhjen dhe pushimin pas punës ose lodhjeje.", std:"çlodhjem / pusho", example:"Shkreu pak pas punës.", ts:93 },
+  { word:"Kopaçe", dialect:"Fier", type:"emër", short:"copë e madhe", full:"Copë e madhe e diçkaje, zakonisht ushqimi ose materiali.", std:"copë e madhe", example:"Ma dha një kopaçe bukë.", ts:94 },
+  { word:"Kallamoq", dialect:"Fier", type:"emër", short:"misër", full:"Misri, bima ose kokrra e misrit. I zakonshëm në fushat e Fierit.", std:"misër", example:"Fushat e Fierit janë plot kallamoq.", ts:95 },
+  // Lushnjë
+  { word:"Kallçë", dialect:"Lushnjë", type:"emër", short:"baltë, tokë e lagur", full:"Tokë e lagur dhe baltosinë, zakonisht pas shiut ose pranë ujit.", std:"baltë / tokë e lagur", example:"Çizmet u mbushën me kallçë.", ts:96 },
+  { word:"Rreckë", dialect:"Lushnjë", type:"emër", short:"copë e vjetër, lecka", full:"Copë e vjetër dhe e grisur rrobe ose materiali. Shpesh me nuancë negative.", std:"lecka / copë e vjetër", example:"Ata rreckë s'bëjnë asgjë.", ts:97 },
+  { word:"Mëndjelehtë", dialect:"Lushnjë", type:"mbiemër", short:"i pakujdesshëm, i papërgjegjshëm", full:"Mbiemër për dikë të pakujdesshëm dhe të papërgjegjshëm, që nuk mendon para se të veprojë.", std:"i pakujdesshëm / i papërgjegjshëm", example:"Ai mëndjelehtë nuk mban fjalën.", ts:98 },
+  { word:"Trastë", dialect:"Lushnjë", type:"emër", short:"thes, çantë e madhe", full:"Thes ose çantë e madhe prej liri ose lëkure. Vegël tradicionale bujqësore dhe tregtare.", std:"thes / çantë e madhe", example:"Mori trastat dhe u nis në treg.", ts:99 },
+  { word:"Zallamahi", dialect:"Lushnjë", type:"emër", short:"rrëmujë, zhurmë e madhe", full:"Rrëmujë dhe zhurmë e madhe njerëzish, kaos. Fjalë ekspresive me origjinë të paqartë.", std:"rrëmujë / kaos", example:"Ç'zallamahi bënë fëmijët!", ts:100 },
+  // Patos
+  { word:"Hijezi", dialect:"Patos", type:"emër", short:"bukuri, elegancë", full:"Bukuri natyrore dhe hijeshi. Fjalë poetike e zakonshme në jug.", std:"bukuri / elegancë", example:"Hijezinë e saj e admiruan të gjithë.", ts:101 },
+  { word:"Prapanik", dialect:"Patos", type:"mbiemër", short:"kokëfortë, i pabindur", full:"Mbiemër për dikë shumë kokëfortë që nuk ndryshon mendim me lehtësi.", std:"kokëfortë / i pabindur", example:"Ai prapanik nuk dëgjon asnjërin.", ts:102 },
+  { word:"Kërrutë", dialect:"Patos", type:"emër", short:"degë e tharë, dru i thatë", full:"Degë ose trungu i tharë i pemës, i vdekur dhe i brishtë.", std:"degë e tharë / dru i vdekur", example:"Mblodhëm kërrutë për zjarr.", ts:103 },
+  { word:"Piskamë", dialect:"Patos", type:"emër", short:"britmë e lartë", full:"Britmë e mprehtë dhe e fortë nga frika, dhimbja ose çudia.", std:"britmë", example:"Dëgjuam piskamën e saj prej larg.", ts:104 },
+  { word:"Murrlan", dialect:"Patos", type:"emër", short:"erë e fortë", full:"Era e fortë dhe e pakëndshme nga jugu. E bezdisshme sidomos gjatë verës.", std:"erë e fortë", example:"Murrlanin e solli veriu.", ts:105 },
+  // Roskovec
+  { word:"Feks", dialect:"Roskovec", type:"folje", short:"shkëlqen, ndriçon", full:"Folje që tregon shkëlqimin dhe ndriçimin e diçkaje. Shpesh e përdorur për diell ose yje.", std:"shkëlqen / ndriçon", example:"Dielli feks mbi fushë.", ts:106 },
+  { word:"Kacidhe", dialect:"Roskovec", type:"emër", short:"monedhë e vogël, para të vogla", full:"Monedhë e vogël, shpesh e përdorur në shumës për para të pakta.", std:"monedhë e vogël / kusur", example:"S'kam as kacidhe me vete.", ts:107 },
+  { word:"Hallakat", dialect:"Roskovec", type:"folje", short:"endet pa qëllim, bredh kot", full:"Folje që tregon endjen pa drejtim ose qëllim, shpesh me nuancë negative.", std:"endet / bredh kot", example:"Hallakat nëpër qytet pa punë.", ts:108 },
+  { word:"Vonoj", dialect:"Roskovec", type:"folje", short:"vonohem, rri prapa", full:"Folje që tregon vonesën, mosardhjen në kohë të caktuar.", std:"vonohem / mbetëm prapa", example:"U vonova se rruga ishte e keqe.", ts:109 },
+  { word:"Përtac", dialect:"Roskovec", type:"mbiemër", short:"dembel, i plogët", full:"Mbiemër për dikë pa dëshirë pune, të plogët dhe dembel.", std:"dembel / i plogët", example:"Ky përtac s'do të bëjë asgjë.", ts:110 },
+  // Divjakë
+  { word:"Lagunor", dialect:"Divjakë", type:"emër", short:"banor pranë lagunës", full:"Person që jeton pranë lagunës ose ka lidhje me ambientin e lagunës. Identitet vendor i Divjakës.", std:"banor lagunës", example:"Lagunorët e njohin mirë natyrën.", ts:111 },
+  { word:"Gurgullimë", dialect:"Divjakë", type:"emër", short:"zhurmë uji, gurgullimë", full:"Tingulli i ujit që rrjedh, gurgullima e burimit ose rrëkës.", std:"gurgullimë / zhurmë uji", example:"Gurgullima e lagunës na shoqëronte.", ts:112 },
+  { word:"Pojatë", dialect:"Divjakë", type:"emër", short:"strehë bagëtish", full:"Ndërtesë e vogël dhe primitive ku strehën bagëtitë, sidomos gjatë dimrit.", std:"strehë bagëtish / kasolle", example:"Delet i fusin në pojatë natën.", ts:113 },
+  { word:"Rropamë", dialect:"Divjakë", type:"emër", short:"zhurmë e madhe", full:"Zhurmë e madhe dhe kaotike, shpesh nga lëvizja e shumë njerëzve ose ngjarjeve.", std:"zhurmë e madhe", example:"Ç'rropamë doli nga tregu!", ts:114 },
+  { word:"Krrabë", dialect:"Divjakë", type:"emër", short:"shkop druri, degë e fortë", full:"Shkop i fortë druri ose degë e trashë, e përdorur si vegël ose mbështetje.", std:"shkop / degë e fortë", example:"Mbajte krrabën kur hipi në mal.", ts:115 },
+];
+
+let words = JSON.parse(localStorage.getItem('fjalori-zonat-words') || 'null') || INIT_WORDS;
+let activeDial = 'all';
+let activeSort = 'alpha';
+
+function save() { localStorage.setItem('fjalori-zonat-words', JSON.stringify(words)); }
+
+function updateStats() {
+  document.getElementById('hs-total').textContent = words.length;
+  const vloreGroup = ['Vlorë','Orikum','Himarë','Dhërmi','Jalë','Palasë','Borsh','Qeparo','Lukovë'];
+  const sarandeGroup = ['Sarandë','Ksamil','Delvinë','Konispol'];
+  document.getElementById('hs-zone1').textContent = words.filter(w => vloreGroup.includes(w.dialect)).length;
+  document.getElementById('hs-zone2').textContent = words.filter(w => sarandeGroup.includes(w.dialect)).length;
+  document.getElementById('hs-other').textContent = words.filter(w => !vloreGroup.includes(w.dialect) && !sarandeGroup.includes(w.dialect)).length;
+}
+
+function getFiltered() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  let list = words.filter(w => {
+    const mD = activeDial === 'all' || w.dialect === activeDial;
+    const mQ = !q || w.word.toLowerCase().includes(q) || w.short.toLowerCase().includes(q) || (w.full || '').toLowerCase().includes(q) || (w.std || '').toLowerCase().includes(q);
+    return mD && mQ;
+  });
+  if (activeSort === 'alpha') list.sort((a, b) => a.word.localeCompare(b.word, 'sq'));
+  else if (activeSort === 'dialect') list.sort((a, b) => a.dialect.localeCompare(b.dialect, 'sq') || a.word.localeCompare(b.word, 'sq'));
+  else list.sort((a, b) => b.ts - a.ts);
+  return list;
+}
+
+function render() {
+  const list = getFiltered();
+  const grid = document.getElementById('grid');
+  const empty = document.getElementById('empty');
+  const rc = document.getElementById('result-count');
+  rc.textContent = list.length + ' fjalë';
+  if (!list.length) { grid.innerHTML = ''; empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+  grid.innerHTML = list.map((w, i) => {
+    const zc = ZONE_COLORS[w.dialect] || { bg: '#F0F0F0', color: '#333' };
+    return `
+    <article class="word-card" style="animation-delay:${Math.min(i * 0.04, 0.3)}s" onclick="toggleCard(this)">
+      <div class="card-top">
+        <div class="card-head">
+          <h3 class="card-word">${esc(w.word)}</h3>
+          <div class="card-right">
+            <span class="d-badge" style="background:${zc.bg};color:${zc.color};">${w.dialect}</span>
+            <span class="card-chevron">▾</span>
+          </div>
+        </div>
+        <div class="card-type">${w.type}</div>
+        <p class="card-short">${esc(w.short)}</p>
+      </div>
+      <div class="card-body">
+        <div class="card-body-inner">
+          ${w.full ? `<div class="detail-block"><div class="dlabel">Shpjegimi</div><p class="dtext">${esc(w.full)}</p></div>` : ''}
+          ${w.std ? `<div class="detail-block"><div class="dlabel">Shqipja standarde</div><p class="dstd">${esc(w.std)}</p></div>` : ''}
+          ${w.example ? `<div class="detail-block"><div class="dlabel">Shembull</div><div class="dexample">${esc(w.example)}</div></div>` : ''}
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+  updateStats();
+}
+
+function esc(str) {
+  return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function toggleCard(card) { card.classList.toggle('open'); }
+
+document.querySelectorAll('.df-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.df-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeDial = btn.dataset.d;
+    render();
+  });
+});
+
+document.getElementById('search').addEventListener('input', render);
+document.getElementById('sort-select').addEventListener('change', e => { activeSort = e.target.value; render(); });
+
+function openModal() { document.getElementById('modal').classList.add('open'); }
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  ['f-word','f-short','f-full','f-std','f-example'].forEach(id => document.getElementById(id).value = '');
+}
+document.getElementById('open-modal').addEventListener('click', openModal);
+document.getElementById('close-modal').addEventListener('click', closeModal);
+document.getElementById('cancel-btn').addEventListener('click', closeModal);
+document.getElementById('modal').addEventListener('click', e => { if (e.target === document.getElementById('modal')) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+document.getElementById('save-btn').addEventListener('click', () => {
+  const w = document.getElementById('f-word').value.trim();
+  const s = document.getElementById('f-short').value.trim();
+  if (!w || !s) { showToast('Ju lutem plotësoni fjalën dhe shpjegimin e shkurtër!'); return; }
+  const entry = {
+    word: w,
+    dialect: document.getElementById('f-dialect').value,
+    type: document.getElementById('f-type').value,
+    short: s,
+    full: document.getElementById('f-full').value.trim(),
+    std: document.getElementById('f-std').value.trim(),
+    example: document.getElementById('f-example').value.trim(),
+    ts: Date.now()
+  };
+  words.unshift(entry);
+  save();
+  closeModal();
+  showToast('Fjala "' + w + '" u ruajt!');
+  render();
+});
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+render();
+</script>
+</body>
+</html>
